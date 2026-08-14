@@ -1,0 +1,17 @@
+[project]
+name = "memorae-personal-intelligence"
+version = "2.0.0"
+description = "Evidence-first personal intelligence, knowledge graph, and GraphRAG platform"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0,<9.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"

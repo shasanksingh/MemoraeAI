@@ -1,0 +1,5 @@
+import { PageHeading } from "@/components/page-heading";
+import { Card } from "@/components/ui/card";
+import { timeline } from "@/lib/data";
+
+export default function TimelinePage() { return <><PageHeading eyebrow="History" title="Timeline Intelligence" description="Reconstruct project evolution, commitment changes, decisions, and meeting history without losing superseded evidence." /><Card className="p-6"><div className="mx-auto max-w-3xl">{timeline.concat(timeline).map((item, index) => <div key={`${item.title}-${index}`} className="grid grid-cols-[72px_24px_1fr] gap-4 pb-8"><p className="pt-1 text-xs text-zinc-600">{item.time}</p><div className="flex flex-col items-center"><span className="size-2.5 rounded-full bg-violet-400 shadow-[0_0_16px_#8b5cf6]" />{index < 7 && <span className="mt-2 h-full w-px bg-white/10" />}</div><div><p className="text-[11px] uppercase tracking-wider text-violet-400">{item.type}</p><p className="mt-1 text-sm text-zinc-300">{item.title}</p><p className="mt-2 text-xs text-zinc-600">Evidence-linked · current state verified</p></div></div>)}</div></Card></>; }

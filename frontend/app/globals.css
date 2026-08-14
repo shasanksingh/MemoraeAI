@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+:root {
+  --background: #07080d;
+  --panel: rgba(18, 21, 31, 0.72);
+  --panel-strong: #12151f;
+  --border: rgba(255, 255, 255, 0.085);
+  --text: #f4f5f8;
+  --muted: #9198aa;
+  --violet: #8b5cf6;
+  --cyan: #22d3ee;
+  --emerald: #34d399;
+  --amber: #fbbf24;
+  --rose: #fb7185;
+}
+
+* { box-sizing: border-box; }
+html { background: var(--background); }
+body {
+  margin: 0;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 20% -10%, rgba(139, 92, 246, .15), transparent 32rem),
+    radial-gradient(circle at 95% 0%, rgba(34, 211, 238, .09), transparent 28rem),
+    var(--background);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  min-height: 100vh;
+}
+
+::selection { background: rgba(139, 92, 246, .45); }
+.glass {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.04), 0 24px 80px rgba(0,0,0,.28);
+  backdrop-filter: blur(18px);
+}
+.subtle-grid {
+  background-image: linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
